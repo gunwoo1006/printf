@@ -65,6 +65,25 @@ Numbers are printed recursively by dividing the value by the base until the most
 No complex data structure is used in this project.  
 The implementation mainly relies on strings, integer values, pointers, and `va_list` for handling variadic arguments.
 
+### Variadic Arguments
+
+ft_printf uses variadic functions to accept a variable number of arguments.
+
+The implementation relies on the macros provided by `stdarg.h`:
+
+- `va_list` stores the list of arguments.
+- `va_start` initializes the argument list.
+- `va_arg` retrieves the next argument of a specified type.
+- `va_end` cleans up the argument list.
+
+When a format specifier is encountered in the format string, `va_arg` is used to extract the corresponding argument and pass it to the appropriate printing function.
+
+This mechanism allows ft_printf to handle different argument types while using a single function prototype:
+
+```c
+int ft_printf(const char *format, ...);
+```
+
 ## Instructions
 
 - ft_printf.c
@@ -124,7 +143,8 @@ https://velog.io/@octo__/C-%EC%96%B8%EC%96%B4-%EA%B0%80%EB%B3%80%EC%9D%B8%EC%9E%
 - format specifier
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ruvendix&logNo=220891573114
 
-- hexadecimal
+- hexadecimal 
+https://www.ibm.com/docs/en/ste/11.0.0?topic=maps-hex-decimal-symbol-values
 
 ### AI usage
 
