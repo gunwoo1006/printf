@@ -3,29 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gkim <gkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 16:46:00 by gkim              #+#    #+#             */
-/*   Updated: 2026/05/24 14:13:45 by marvin           ###   ########.fr       */
+/*   Updated: 2026/05/24 15:42:37 by gkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_print_str(char	*str)
-{
-	int	i;
-
-	if (!str)
-		return (write(1, "(null)", 6));
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
-}
 
 int	ft_print_int(int nb)
 {

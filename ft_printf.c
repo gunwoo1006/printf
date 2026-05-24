@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gkim <gkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 14:59:20 by gkim              #+#    #+#             */
-/*   Updated: 2026/05/24 14:16:22 by marvin           ###   ########.fr       */
+/*   Updated: 2026/05/24 15:24:11 by gkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,21 @@ int	ft_printc(int c)
 	ch = (char)c;
 	write(1, &ch, 1);
 	return (1);
+}
+
+int	ft_print_str(char	*str)
+{
+	int	i;
+
+	if (!str)
+		return (write(1, "(null)", 6));
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }
 
 int	ft_printf(const char *format, ...)

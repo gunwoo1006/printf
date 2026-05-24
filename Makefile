@@ -6,7 +6,7 @@
 #    By: gkim <gkim@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/27 15:21:35 by gkim              #+#    #+#              #
-#    Updated: 2026/01/28 20:17:27 by gkim             ###   ########.fr        #
+#    Updated: 2026/05/24 16:00:27 by gkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,11 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
 SRCS = ft_printf.c \
-		ft_print_hex.c \
 		ft_utils.c 
 
 OBJS = $(SRCS:.c=.o)
 
-all : $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

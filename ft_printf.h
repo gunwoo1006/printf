@@ -6,7 +6,7 @@
 /*   By: gkim <gkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:17:55 by gkim              #+#    #+#             */
-/*   Updated: 2026/01/28 20:21:20 by gkim             ###   ########.fr       */
+/*   Updated: 2026/05/24 15:58:02 by gkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 int	ft_printc(int c);
 int	ft_print_hex(unsigned int nb, char spec);
 int	ft_printf(const char *format, ...);
-int	ft_formats(va_list	ap, const char format);
-int	ft_print_str(char	*str);
+int	ft_formats(va_list ap, const char format);
+int	ft_print_str(char *str);
 int	ft_print_int(int nb);
 int	ft_print_unsigned(unsigned int nb);
 int	ft_print_ptr(void *ptr);
