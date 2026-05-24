@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkim <gkim@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 16:46:00 by gkim              #+#    #+#             */
-/*   Updated: 2026/02/20 15:18:02 by gkim             ###   ########.fr       */
+/*   Updated: 2026/05/24 14:13:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,20 @@ int	ft_print_ptr(void *ptr)
 	res = (uintptr_t)ptr;
 	write(1, "0x", 2);
 	return (2 + ft_print_hex_ptr(res));
+}
+
+int	ft_print_hex(unsigned int nb, char spec)
+{
+	char	*base;
+	int		count;
+
+	if (spec == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	count = 0;
+	if (nb >= 16)
+		count += ft_print_hex(nb / 16, spec);
+	count += write(1, &base[nb % 16], 1);
+	return (count);
 }
